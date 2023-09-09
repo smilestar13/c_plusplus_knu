@@ -6,7 +6,11 @@
 using namespace std;
 
 int main() {
-    int K, P, T;
+    float K, P, T;
+    cout << "WARN: This program work only with int and float type.\n"
+            "\tIf you enter a different type of data,\n"
+            "\tthe behavior of the program may be unpredictable,\n"
+            "\tthe responsibility for this factor rests with you.\n\n";
     cout << "Enter K value: ";
     cin >> K;
     cout << "Enter P value: ";
@@ -14,7 +18,7 @@ int main() {
     cout << "Enter T value: ";
     cin >> T;
 
-    int temp = K;
+    float temp = K;
     K = T;
     T = P;
     P = temp;
