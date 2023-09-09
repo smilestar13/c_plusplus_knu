@@ -8,4 +8,5 @@ include_directories(lab_01/task_01)
 add_executable(c_plusplus_knu
         lab_01/task_01/task_01.cpp
         lab_01/task_02/task_02.cpp
+        lab_01/task_03/task_03.cpp
 )

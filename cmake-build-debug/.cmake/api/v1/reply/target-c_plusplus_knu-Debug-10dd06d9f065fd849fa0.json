@@ -64,7 +64,8 @@
 			"sourceIndexes" : 
 			[
 				0,
-				1
+				1,
+				2
 			]
 		}
 	],
@@ -98,7 +99,8 @@
 			"sourceIndexes" : 
 			[
 				0,
-				1
+				1,
+				2
 			]
 		}
 	],
@@ -114,6 +116,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "lab_01/task_02/task_02.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lab_01/task_03/task_03.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],
