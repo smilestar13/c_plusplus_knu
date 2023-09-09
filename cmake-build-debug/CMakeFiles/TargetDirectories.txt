@@ -1,0 +1,3 @@
+/Users/borysoleksiienko/Projects/c_plusplus_knu/cmake-build-debug/CMakeFiles/c_plusplus_knu.dir
+/Users/borysoleksiienko/Projects/c_plusplus_knu/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/borysoleksiienko/Projects/c_plusplus_knu/cmake-build-debug/CMakeFiles/rebuild_cache.dir

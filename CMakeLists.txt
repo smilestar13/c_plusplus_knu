@@ -7,4 +7,4 @@ include_directories(lab_01/task_01)
 
 add_executable(c_plusplus_knu
         lab_01/task_01/main.cpp
-        lab_01/task_01/main.h)
+)
