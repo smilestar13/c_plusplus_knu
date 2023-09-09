@@ -49,12 +49,19 @@ cmake_ninja_workdir = /Users/borysoleksiienko/Projects/c_plusplus_knu/cmake-buil
 
 build cmake_object_order_depends_target_c_plusplus_knu: phony || CMakeFiles/c_plusplus_knu.dir
 
-build CMakeFiles/c_plusplus_knu.dir/lab_01/task_01/main.cpp.o: CXX_COMPILER__c_plusplus_knu_unscanned_Debug /Users/borysoleksiienko/Projects/c_plusplus_knu/lab_01/task_01/main.cpp || cmake_object_order_depends_target_c_plusplus_knu
-  DEP_FILE = CMakeFiles/c_plusplus_knu.dir/lab_01/task_01/main.cpp.o.d
+build CMakeFiles/c_plusplus_knu.dir/lab_01/task_01/task_01.cpp.o: CXX_COMPILER__c_plusplus_knu_unscanned_Debug /Users/borysoleksiienko/Projects/c_plusplus_knu/lab_01/task_01/task_01.cpp || cmake_object_order_depends_target_c_plusplus_knu
+  DEP_FILE = CMakeFiles/c_plusplus_knu.dir/lab_01/task_01/task_01.cpp.o.d
   FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fcolor-diagnostics
   INCLUDES = -I/Users/borysoleksiienko/Projects/c_plusplus_knu/lab_01/task_01
   OBJECT_DIR = CMakeFiles/c_plusplus_knu.dir
   OBJECT_FILE_DIR = CMakeFiles/c_plusplus_knu.dir/lab_01/task_01
+
+build CMakeFiles/c_plusplus_knu.dir/lab_01/task_02/task_02.cpp.o: CXX_COMPILER__c_plusplus_knu_unscanned_Debug /Users/borysoleksiienko/Projects/c_plusplus_knu/lab_01/task_02/task_02.cpp || cmake_object_order_depends_target_c_plusplus_knu
+  DEP_FILE = CMakeFiles/c_plusplus_knu.dir/lab_01/task_02/task_02.cpp.o.d
+  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/borysoleksiienko/Projects/c_plusplus_knu/lab_01/task_01
+  OBJECT_DIR = CMakeFiles/c_plusplus_knu.dir
+  OBJECT_FILE_DIR = CMakeFiles/c_plusplus_knu.dir/lab_01/task_02
 
 
 # =============================================================================
@@ -64,7 +71,7 @@ build CMakeFiles/c_plusplus_knu.dir/lab_01/task_01/main.cpp.o: CXX_COMPILER__c_p
 #############################################
 # Link the executable c_plusplus_knu
 
-build c_plusplus_knu: CXX_EXECUTABLE_LINKER__c_plusplus_knu_Debug CMakeFiles/c_plusplus_knu.dir/lab_01/task_01/main.cpp.o
+build c_plusplus_knu: CXX_EXECUTABLE_LINKER__c_plusplus_knu_Debug CMakeFiles/c_plusplus_knu.dir/lab_01/task_01/task_01.cpp.o CMakeFiles/c_plusplus_knu.dir/lab_01/task_02/task_02.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk
   OBJECT_DIR = CMakeFiles/c_plusplus_knu.dir
   POST_BUILD = :

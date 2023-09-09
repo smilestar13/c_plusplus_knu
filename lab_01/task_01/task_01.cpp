@@ -27,7 +27,7 @@ int main() {
     } else {
         numerator = (2 * x - 3) * ((7 + 12 * b) * (7 + 12 * b)) + x;
         a = numerator / denominator;
-        cout << "Answer: " << a;
+        cout << "Answer: " << a << endl;
     }
 
     return 0;
