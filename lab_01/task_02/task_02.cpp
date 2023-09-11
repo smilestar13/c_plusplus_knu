@@ -23,7 +23,7 @@ int main() {
 
     double area, volume;
     area = M_PI * r * (r + l);
-    volume = 1.0 / 3.0 * M_PI * pow(r, 2) * h;
+    volume = 1.0 / 3.0 * M_PI * r * r * h;
 
     cout << "Conus area: " << area << endl;
     cout << "Conus volume: " << volume << endl;

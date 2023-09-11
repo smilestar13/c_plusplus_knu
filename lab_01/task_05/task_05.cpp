@@ -6,21 +6,21 @@
 using namespace std;
 
 int main() {
-    int bait, mega, kilo;
+    int byte, mega, kilo;
     cout << "WARN: This program work only with int type.\n"
             "\tIf you enter a different type of data,\n"
             "\tthe behavior of the program may be unpredictable,\n"
             "\tthe responsibility for this factor rests with you.\n\n";
     cout << "Enter the size of your file in bytes: ";
-    cin >> bait;
+    cin >> byte;
 
-    mega = bait / (1024 * 1024);
-    kilo = (bait - mega * (1024 * 1024)) / 1024;
-    bait = bait - (mega * (1024 * 1024) + kilo * 1024);
+    mega = byte / (1024 * 1024);
+    kilo = (byte - mega * (1024 * 1024)) / 1024;
+    byte = byte - (mega * (1024 * 1024) + kilo * 1024);
 
-    cout << mega << endl;
-    cout << kilo << endl;
-    cout << bait << endl;
+    cout << "Mega: " << mega << endl;
+    cout << "Kilo: " <<kilo << endl;
+    cout << "Byte: " << byte << endl;
 
     return 0;
 }
