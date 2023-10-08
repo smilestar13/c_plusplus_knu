@@ -1,7 +1,0 @@
-# ninja log v5
-2	358	1694266701100190240	CMakeFiles/c_plusplus_knu.dir/lab_01/task_02/task_02.cpp.o	a89f93e6c7985642
-2	432	1694266777737112224	CMakeFiles/c_plusplus_knu.dir/lab_01/task_01/task_01.cpp.o	1b2a7e9950dee3cd
-1	49	1694284360167099418	build.ninja	2fae215a4c79b6ce
-0	391	1694265506962119983	CMakeFiles/c_plusplus_knu.dir/lab_01/task_01/main.cpp.o	3a2a71600dec7383
-358	400	1694266701146754352	c_plusplus_knu	11cb86385ab973fb
-2	373	1694266302671767751	CMakeFiles/c_plusplus_knu.dir/lab_01/task_02/main.cpp.o	d75924ba8cff431a
