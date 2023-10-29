@@ -22,5 +22,5 @@ add_executable(c_plusplus_knu
         lab_03/task_04/task_04.cpp
         lab_03/task_05/task_05.cpp
         individual_01/task_01/task_01.cpp
-        individual_01/task_02/task_02.cpp
+        individual_01/task_01/task_01.cpp
 )
