@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <fstream>
+
 using namespace std;
 
 double function_x(double xn) {
@@ -36,9 +37,9 @@ int main() {
 
     ofstream fout("outOleksiienko.txt");
 
-    fout << "\nПідінтегральна функція: y = 7 - x - 6 / x" << endl;
+    fout << "Підінтегральна функція: y = 7 - x - 6 / x" << endl;
     fout << "\nПроміжок: [" << a << ", " << b << "]" << endl;
-    fout << "\nТочне значення інтегралу: 6.74944318463167" << endl;
+    fout << "\nТочне значення інтегралу: 6.74944318463167\n" << endl;
 
     for (int n = 10; n <= n_max; n += 10) {
         double result = right_rectangle_method(a, b, n);
