@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
@@ -13,7 +14,7 @@ int main() {
 
     double sum = 0.0;
     for (int i = A; i <= B; ++i) {
-        sum += i * i;
+        sum += sqrt(i);
     }
 
     cout << "Сума квадратних коренів всіх цілих чисел на проміжку від " << A << " до " << B << " включно дорівнює "
