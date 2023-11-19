@@ -41,8 +41,8 @@ int main() {
     fout << "\nПроміжок: [" << a << ", " << b << "]" << endl;
     fout << "\nТочне значення інтегралу: 6.74944318463167\n" << endl;
 
-    for (int n = 10; n <= n_max; n += 10) {
-        double result = right_rectangle_method(a, b, n);
+    for (int n = 1; n <= 10; n++) {
+        double result = right_rectangle_method(a, b, n * n_max);
         double exact_value = 6.74944318463167;
         double error = exact_value - result;
 
