@@ -9,9 +9,9 @@ using namespace std;
 int main() {
     double A;
     int N;
-    cout << "Enter a real number A: ";
+    cout << "Введіть значення A: ";
     cin >> A;
-    cout << "Enter a positive integer N (> 0): ";
+    cout << "Введіть значення N (> 0): ";
     cin >> N;
 
     double sum = 1.0;
@@ -26,7 +26,7 @@ int main() {
         }
     }
 
-    cout << "The value of the expression for A = " << A << " and N = " << N << " is " << sum << endl;
+    cout << "Значение виразу для A = " << A << " та N = " << N << " це " << sum << endl;
     return 0;
 }
 

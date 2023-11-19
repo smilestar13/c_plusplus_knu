@@ -8,13 +8,8 @@ using namespace std;
 
 int main() {
     int N;
-    cout << "Enter a positive integer N (> 2): ";
+    cout << "Введіть N (> 2): ";
     cin >> N;
-
-    if (N > 1000) {
-        cout << "N is too large for the static array." << endl;
-        return 1;
-    }
 
     int A[1001];
 
