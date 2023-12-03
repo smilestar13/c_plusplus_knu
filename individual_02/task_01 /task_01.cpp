@@ -17,12 +17,13 @@ double taylor_ln(double x, double epsilon = 1e-6) {
     if (x <= 0.0) {
         throw domain_error("Logarithm is not defined for non-positive values.");
     }
-    double term = (x - 1) / x;
+    double term = (x - 1);
     double sum = term;
     int n = 2;
 
     while (abs(term) > epsilon) {
-        term *= -1 * (x - 1) / x * (n - 1) / n;
+//        term *= -1 * (x - 1) / x * (n - 1) / n;
+        term = -term * (x - 1) / n;
         sum += term;
         ++n;
     }
@@ -31,19 +32,23 @@ double taylor_ln(double x, double epsilon = 1e-6) {
 
 // Допоміжна функція для рекурсивного виклику
 double recursive_ln_helper(double x, int n, double term, double epsilon) {
-    if (std::abs(term) < epsilon) {
-        return 0; // Якщо терм меньше за епсілон, повертаємо 0
+    if (abs(term) < epsilon) {
+        return 0; // Если терм меньше за эпсилон, возвращаем 0
     }
-    return term + recursive_ln_helper(x, n + 1, -term * (x - 1) / n * (n - 1) / (n + 1), epsilon);
+    // Вычисляем следующий член ряда, используя верную формулу
+    term = -term * (x - 1) / n;
+    return term + recursive_ln_helper(x, n + 1, term, epsilon);
 }
 
-// Рекурсивна функція для обчислення ln(x)
+// Рекурсивная функция для вычисления ln(x)
 double recursive_ln(double x, double epsilon = 1e-6) {
     if (x <= 0.0) {
         throw domain_error("Logarithm is not defined for non-positive values.");
     }
-    return recursive_ln_helper(x, 2, (x - 1) / x, epsilon);
+    double term = (x - 1); // Начинаем с первого члена ряда Тейлора
+    return term + recursive_ln_helper(x, 2, term, epsilon);
 }
+
 
 void tabulate_ln(double a, double b, int n) {
     if (n <= 0 || b <= a) {
