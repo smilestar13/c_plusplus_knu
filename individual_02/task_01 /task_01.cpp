@@ -15,14 +15,13 @@ typedef double (*LogFunction)(double, double);
 // Ітеративна функція для обчислення ln(x)
 double taylor_ln(double x, double epsilon = 1e-6) {
     if (x <= 0.0) {
-        throw domain_error("Logarithm is not defined for non-positive values.");
+        throw domain_error("Логарифм не визначений для недодатних значень.");
     }
     double term = (x - 1);
     double sum = term;
     int n = 2;
 
     while (abs(term) > epsilon) {
-//        term *= -1 * (x - 1) / x * (n - 1) / n;
         term = -term * (x - 1) / n;
         sum += term;
         ++n;
@@ -33,26 +32,25 @@ double taylor_ln(double x, double epsilon = 1e-6) {
 // Допоміжна функція для рекурсивного виклику
 double recursive_ln_helper(double x, int n, double term, double epsilon) {
     if (abs(term) < epsilon) {
-        return 0; // Если терм меньше за эпсилон, возвращаем 0
+        return 0;
     }
-    // Вычисляем следующий член ряда, используя верную формулу
     term = -term * (x - 1) / n;
     return term + recursive_ln_helper(x, n + 1, term, epsilon);
 }
 
-// Рекурсивная функция для вычисления ln(x)
+// Рекурсивна функція для вирахування ln(x)
 double recursive_ln(double x, double epsilon = 1e-6) {
     if (x <= 0.0) {
-        throw domain_error("Logarithm is not defined for non-positive values.");
+        throw domain_error("Логарифм не визначений для недодатних значень.");
     }
-    double term = (x - 1); // Начинаем с первого члена ряда Тейлора
+    double term = (x - 1);
     return term + recursive_ln_helper(x, 2, term, epsilon);
 }
 
 
 void tabulate_ln(double a, double b, int n) {
     if (n <= 0 || b <= a) {
-        throw invalid_argument("Invalid range or number of points for tabulation.");
+        throw invalid_argument("Недійсний діапазон!");
     }
 
     double dx = (b - a) / n;
@@ -73,10 +71,10 @@ void tabulate_ln(double a, double b, int n) {
 int main() {
     double a, b;
     int n;
-    cout << "Enter the interval for tabulation [a;b] and the number of intervals n: " << endl;
-    cout << "Start of interval = "; cin >> a;
-    cout << "End of interval = "; cin >> b;
-    cout << "Number of intervals = "; cin >> n;
+    cout << "Введіть інтервал для табуляції [a;b] та кількість інтервалів n: " << endl;
+    cout << "Старт інтервала = "; cin >> a;
+    cout << "Кінець інтервала = "; cin >> b;
+    cout << "Кількість інтервалів = "; cin >> n;
 
     try {
         tabulate_ln(a, b, n);
