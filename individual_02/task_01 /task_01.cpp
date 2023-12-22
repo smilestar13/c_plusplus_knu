@@ -47,8 +47,7 @@ double recursive_ln(double x, double epsilon = 1e-6) {
     return term + recursive_ln_helper(x, 2, term, epsilon);
 }
 
-
-void tabulate_ln(double a, double b, int n) {
+void tabulate_ln(double a, double b, int n, LogFunction iterative, LogFunction recursive) {
     if (n <= 0 || b <= a) {
         throw invalid_argument("Недійсний діапазон!");
     }
@@ -61,9 +60,9 @@ void tabulate_ln(double a, double b, int n) {
 
     while (x <= b) {
         cout << x << "\t\t"
-             << taylor_ln(x) << "\t\t"
+             << iterative(x, 1e-6) << "\t\t"
              << log(x) << "\t\t"
-             << recursive_ln(x) << '\n';
+             << recursive(x, 1e-6) << '\n';
         x += dx;
     }
 }
@@ -77,7 +76,7 @@ int main() {
     cout << "Кількість інтервалів = "; cin >> n;
 
     try {
-        tabulate_ln(a, b, n);
+        tabulate_ln(a, b, n, taylor_ln, recursive_ln);
     } catch (const exception& e) {
         cerr << "Error: " << e.what() << endl;
     }
